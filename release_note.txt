@@ -78,7 +78,7 @@
 版本号：Release 1.5.19
 发布时间：2020/09/20 23:58
 修改记录：
-   (1) 微信：修复 client.ProfitSharingQuery() 接口的Bug，https://github.com/iGoogle-ink/gopay/issues/68
+   (1) 微信：修复 client.ProfitSharingQuery() 接口的Bug，https://github.com/stormeye/gopay/issues/68
    (2) 微信：优化 client.doProdPost()
    (3) 支付宝：优化 client.doAliPay()
    (4) 微信：项目文件区分改动，开放平台接口和微信公众号区分
@@ -260,7 +260,7 @@
 版本号：Release 2.0.1
 发布时间：2019/12/13 17:20
 修改记录：
-   (1) 处理 go mod 包，go get github.com/iGoogle-ink/gopay/v2
+   (1) 处理 go mod 包，go get github.com/stormeye/gopay/v2
 
 版本号：Release 2.0.0
 发布时间：2019/12/12 18:22

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/iGoogle-ink/gopay"
+	"github.com/stormeye/gopay"
 )
 
 // Deprecated

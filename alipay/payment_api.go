@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/util"
 )
 
 // alipay.trade.pay(统一收单交易支付接口)

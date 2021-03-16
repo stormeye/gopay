@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/util"
 )
 
 // 合单APP下单API

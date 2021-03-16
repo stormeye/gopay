@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
-	"github.com/iGoogle-ink/gopay/pkg/xlog"
-	"github.com/iGoogle-ink/gopay/pkg/xrsa"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/util"
+	"github.com/stormeye/gopay/pkg/xlog"
+	"github.com/stormeye/gopay/pkg/xrsa"
 )
 
 func TestClient_Transfer(t *testing.T) {

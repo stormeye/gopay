@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/util"
 )
 
 // 解析支付宝支付异步通知的参数到BodyMap

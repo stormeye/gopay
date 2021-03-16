@@ -6,10 +6,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
-	"github.com/iGoogle-ink/gopay/pkg/xhttp"
-	"github.com/iGoogle-ink/gopay/pkg/xlog"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/util"
+	"github.com/stormeye/gopay/pkg/xhttp"
+	"github.com/stormeye/gopay/pkg/xlog"
 )
 
 // 企业付款（企业向微信用户个人付款）

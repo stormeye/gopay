@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/xhttp"
-	"github.com/iGoogle-ink/gopay/pkg/xlog"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/xhttp"
+	"github.com/stormeye/gopay/pkg/xlog"
 )
 
 // ClientV3 微信支付 V3

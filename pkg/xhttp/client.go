@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/iGoogle-ink/gopay/pkg/util"
+	"github.com/stormeye/gopay/pkg/util"
 )
 
 type Client struct {

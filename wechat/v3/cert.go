@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/iGoogle-ink/gopay/pkg/aes"
-	"github.com/iGoogle-ink/gopay/pkg/errgroup"
-	"github.com/iGoogle-ink/gopay/pkg/util"
+	"github.com/stormeye/gopay/pkg/aes"
+	"github.com/stormeye/gopay/pkg/errgroup"
+	"github.com/stormeye/gopay/pkg/util"
 )
 
 // GetPlatformCerts 获取微信平台证书（获取一次，之后自行保存使用）

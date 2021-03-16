@@ -9,9 +9,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/pkg/aes"
-	"github.com/iGoogle-ink/gopay/pkg/xlog"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/pkg/aes"
+	"github.com/stormeye/gopay/pkg/xlog"
 )
 
 type Resource struct {

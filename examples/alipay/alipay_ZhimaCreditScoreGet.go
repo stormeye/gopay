@@ -1,10 +1,10 @@
 package alipay
 
 import (
-	"github.com/iGoogle-ink/gopay"
-	"github.com/iGoogle-ink/gopay/alipay"
-	"github.com/iGoogle-ink/gopay/pkg/util"
-	"github.com/iGoogle-ink/gopay/pkg/xlog"
+	"github.com/stormeye/gopay"
+	"github.com/stormeye/gopay/alipay"
+	"github.com/stormeye/gopay/pkg/util"
+	"github.com/stormeye/gopay/pkg/xlog"
 )
 
 func ZhimaCreditScoreGet() {
