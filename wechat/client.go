@@ -201,6 +201,14 @@ func (w *Client) doSanBoxPost(bm gopay.BodyMap, path string) (bs []byte, err err
 	var url = baseUrlCh + path
 	bm.Set("appid", w.AppId)
 	bm.Set("mch_id", w.MchId)
+	if w.IsPartner {
+		if bm.GetString("sub_appid") == util.NULL {
+			bm.Set("sub_appid", w.SubAppid)
+		}
+		if bm.GetString("sub_mch_id") == util.NULL {
+			bm.Set("sub_mch_id", w.SubMchId)
+		}
+	}
 
 	if bm.GetString("sign") == util.NULL {
 		bm.Set("sign_type", SignType_MD5)
@@ -320,6 +328,14 @@ func (w *Client) doProdGet(bm gopay.BodyMap, path, signType string) (bs []byte, 
 	}
 	if bm.GetString("mch_id") == util.NULL {
 		bm.Set("mch_id", w.MchId)
+	}
+	if w.IsPartner {
+		if bm.GetString("sub_appid") == util.NULL {
+			bm.Set("sub_appid", w.SubAppid)
+		}
+		if bm.GetString("sub_mch_id") == util.NULL {
+			bm.Set("sub_mch_id", w.SubMchId)
+		}
 	}
 	bm.Remove("sign")
 	sign := getReleaseSign(w.ApiKey, signType, bm)
