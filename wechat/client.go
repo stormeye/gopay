@@ -16,14 +16,17 @@ import (
 )
 
 type Client struct {
-	AppId       string
-	MchId       string
+	AppId       string // 应用ID/服务商的APPID
+	SubAppid    string // 子商户公众账号ID
+	MchId       string // 直连商户号/商户号
+	SubMchId    string // 子商户号
 	ApiKey      string
 	BaseURL     string
 	IsProd      bool
 	DebugSwitch gopay.DebugSwitch
 	certificate *tls.Certificate
 	mu          sync.RWMutex
+	IsPartner   bool // 是否服务商
 }
 
 // 初始化微信客户端 V2
@@ -38,6 +41,27 @@ func NewClient(appId, mchId, apiKey string, isProd bool) (client *Client) {
 		ApiKey:      apiKey,
 		IsProd:      isProd,
 		DebugSwitch: gopay.DebugOff,
+		IsPartner:   false,
+	}
+}
+
+// 初始化微信客户端 V2
+//	appId：服务商的APPID
+//  subAppid: 子商户公众账号ID
+//	mchId：商户号
+//  subMchId: 子商户号
+//	ApiKey：API秘钥值 服务商秘钥
+//	IsProd：是否是正式环境
+func NewClientForPartner(appId, subAppId, mchId, subMchId, apiKey string, isProd bool) (client *Client) {
+	return &Client{
+		AppId:       appId,
+		SubAppid:    subAppId,
+		MchId:       mchId,
+		SubMchId:    subMchId,
+		ApiKey:      apiKey,
+		IsProd:      isProd,
+		DebugSwitch: gopay.DebugOff,
+		IsPartner:   true,
 	}
 }
 
@@ -218,6 +242,14 @@ func (w *Client) doProdPost(bm gopay.BodyMap, path string, tlsConfig *tls.Config
 	}
 	if bm.GetString("mch_id") == util.NULL {
 		bm.Set("mch_id", w.MchId)
+	}
+	if w.IsPartner {
+		if bm.GetString("sub_appid") == util.NULL {
+			bm.Set("sub_appid", w.SubAppid)
+		}
+		if bm.GetString("sub_mch_id") == util.NULL {
+			bm.Set("sub_mch_id", w.SubMchId)
+		}
 	}
 	if bm.GetString("sign") == util.NULL {
 		sign := getReleaseSign(w.ApiKey, bm.GetString("sign_type"), bm)
